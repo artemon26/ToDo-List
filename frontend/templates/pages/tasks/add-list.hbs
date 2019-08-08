@@ -1,0 +1,22 @@
+<h1 class="page-title">Tasks List</h1>
+
+<div class="task-add">
+    <input class="task-add__title" type="text" placeholder="Task title">
+    <textarea class="task-add__description" placeholder="Task description"></textarea>
+
+    <button class="task-add__btn-add button" disabled>Add Task</button>
+</div>
+
+<div class="tasks">
+    <div class="tasks__additional">
+        <p class="tasks__counter"></p>
+
+        <button class="tasks__btn-clear button" {{#unless tasks.length}}disabled{{/unless}}>Clear Tasks List</button>
+    </div>
+
+    <div class="tasks__list">
+        {{#each tasks}}
+            {{> task task=this}}
+        {{/each}}
+    </div>
+</div>

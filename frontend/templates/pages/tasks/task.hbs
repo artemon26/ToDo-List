@@ -1,0 +1,11 @@
+<div class="task {{#ifCond task.status '===' 'Done'}}task_done{{/ifCond}}" data-id="{{task.id}}">
+    <a class="task__title" data-id="{{task.id}}">{{task.title}}</a>
+
+    <div class="task__buttons">
+        {{#ifCond task.status '!==' 'Done'}}
+            <a class="task__btn-edit button" href="#/task/{{task.id}}/edit">Edit</a>
+            <a class="task__btn-done button">Done</a>
+        {{/ifCond}}
+        <a class="task__btn-remove button">Remove</a>
+    </div>
+</div>
